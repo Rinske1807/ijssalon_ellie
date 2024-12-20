@@ -4,10 +4,10 @@ def aanbieding_1(smaak, prijs, korting):
     uitvoer = f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {prijs_na_korting} euro."
     return uitvoer
 
-def inkomsten_totaal(inkomsten):
-    inkomsten_som = sum(inkomsten)
-    btw=inkomsten_som*0.09
-    uitvoer = (f"Het totaal van alle inkomsten van deze week is {inkomsten_som} euro, waarover {btw} euro btw betaald dient te worden.")
+def inkomsten_totaal(inkomsten, btw):
+    totaal = sum(inkomsten)
+    btw_bedrag = totaal * btw
+    uitvoer = f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {btw_bedrag} euro btw betaald dient te worden."
     return uitvoer
 
 def laag_en_hoog(mijn_lijst):
